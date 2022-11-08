@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Vue/Axios Mail List</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>Mail List</h1>
+        <ul>
+            <!-- faccio un ciclo v-for per stampare tutte le mail prese con axios -->
+            <!-- metto un v-if per aspettare che ci siano tutte e 10 le mail prima di stamparle (BONUS) -->
+            <li v-for="mail in mailsArray" v-if="mailsArray.length === 10">
+                {{mail}}
+            </li>
+        </ul>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
