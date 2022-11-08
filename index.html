@@ -14,10 +14,10 @@
 
     <div id="app">
         <h1>Mail List</h1>
-        <ul>
+        <!-- metto un v-if per aspettare che ci siano tutte e 10 le mail prima di stamparle (BONUS) -->
+        <ul v-if="mailsArray.length === 10">
             <!-- faccio un ciclo v-for per stampare tutte le mail prese con axios -->
-            <!-- metto un v-if per aspettare che ci siano tutte e 10 le mail prima di stamparle (BONUS) -->
-            <li v-for="mail in mailsArray" v-if="mailsArray.length === 10">
+            <li v-for="mail in mailsArray">
                 {{mail}}
             </li>
         </ul>
